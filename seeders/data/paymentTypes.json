@@ -3,102 +3,102 @@
     {
       "type": "AmEx",
       "account_number": "55502077",
-      "customer_id": 1
+      "user_id": 1
     },
     {
       "type": "Visa",
       "account_number": "62222537",
-      "customer_id": 2
+      "user_id": 2
     },
     {
       "type": "PayPal",
       "account_number": "90991716",
-      "customer_id": 3
+      "user_id": 3
     },
     {
       "type": "Visa",
       "account_number": "65798336",
-      "customer_id": 4
+      "user_id": 4
     },
     {
       "type": "MasterCard",
       "account_number": "14861152",
-      "customer_id": 5
+      "user_id": 5
     },
     {
       "type": "AmEx",
       "account_number": "30850973",
-      "customer_id": 6
+      "user_id": 6
     },
     {
       "type": "Visa",
       "account_number": "88480322",
-      "customer_id": 7
+      "user_id": 7
     },
     {
       "type": "AmEx",
       "account_number": "28415273",
-      "customer_id": 8
+      "user_id": 8
     },
     {
       "type": "PayPal",
       "account_number": "29245599",
-      "customer_id": 8
+      "user_id": 8
     },
     {
       "type": "PayPal",
       "account_number": "82774143",
-      "customer_id": 7
+      "user_id": 7
     },
     {
       "type": "Visa",
       "account_number": "02326016",
-      "customer_id": 6
+      "user_id": 6
     },
     {
       "type": "MasterCard",
       "account_number": "94802487",
-      "customer_id": 5
+      "user_id": 5
     },
     {
       "type": "AmEx",
       "account_number": "35025706",
-      "customer_id": 4
+      "user_id": 4
     },
     {
       "type": "AmEx",
       "account_number": "73807288",
-      "customer_id": 3
+      "user_id": 3
     },
     {
       "type": "MasterCard",
       "account_number": "87520805",
-      "customer_id": 2
+      "user_id": 2
     },
     {
       "type": "PayPal",
       "account_number": "77676200",
-      "customer_id": 1
+      "user_id": 1
     },
     {
       "type": "Visa",
       "account_number": "18338287",
-      "customer_id": 8
+      "user_id": 8
     },
     {
       "type": "AmEx",
       "account_number": "20983108",
-      "customer_id": 2
+      "user_id": 2
     },
     {
       "type": "MasterCard",
       "account_number": "34922867",
-      "customer_id": 7
+      "user_id": 7
     },
     {
       "type": "Visa",
       "account_number": "34399279",
-      "customer_id": 6
+      "user_id": 6
     }
   ]
 }

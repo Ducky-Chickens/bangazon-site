@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Order = sequelize.define('Order', {
-    customer_id: DataTypes.INTEGER,
+    user_id: DataTypes.INTEGER,
     payment_type: DataTypes.INTEGER
   }, {tableName: 'orders', timestamps: false});
   Order.associate = function(models) {
@@ -10,6 +10,9 @@ module.exports = (sequelize, DataTypes) => {
     }),
     Order.belongsTo(models.PaymentType, {
       foreignKey: 'payment_type_id'
+    }),
+    Order.belongsTo(models.User, {
+      foreignKey: 'user_id'
     })
   }; 
   return Order;

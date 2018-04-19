@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var PaymentType = sequelize.define('PaymentType', {
-    customer_id: DataTypes.INTEGER,
+    user_id: DataTypes.INTEGER,
     provider: DataTypes.STRING,
     account_number: DataTypes.STRING,
     active: DataTypes.BOOLEAN
@@ -9,7 +9,10 @@ module.exports = (sequelize, DataTypes) => {
     PaymentType.associate = function(models) {
       PaymentType.hasMany(models.Order, {
         foreignKey: 'payment_type_id'
-      });
+      }),
+      PaymentType.belongsTo(models.User, {
+        foreignKey: 'user_id'
+      })
     };
   return PaymentType;
 };
