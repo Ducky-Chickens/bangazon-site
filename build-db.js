@@ -2,7 +2,7 @@
 
 let models = require('./models');
 
-let { customers } = require('./seeders/data/customers');
+let { users } = require('./seeders/data/users');
 let { products } = require('./seeders/data/products');
 let { paymentTypes } = require('./seeders/data/paymentTypes');
 let { orders } = require('./seeders/data/orders');
@@ -11,7 +11,7 @@ let { productTypes } = require('./seeders/data/productTypes');
 
 models.sequelize.sync({ force: true })
 .then(() => {
-  return models.Customer.bulkCreate(customers);
+  return models.Customer.bulkCreate(users);
 })
 .then(() => {
   return models.Product.bulkCreate(products);
