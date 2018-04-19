@@ -1,104 +1,124 @@
 {
   "paymentTypes": [
     {
-      "type": "AmEx",
+      "provider": "AmEx",
       "account_number": "55502077",
-      "user_id": 1
+      "user_id": 1,
+      "active": 1
     },
     {
-      "type": "Visa",
+      "provider": "Visa",
       "account_number": "62222537",
-      "user_id": 2
+      "user_id": 2,
+      "active": 1
     },
     {
-      "type": "PayPal",
+      "provider": "PayPal",
       "account_number": "90991716",
-      "user_id": 3
+      "user_id": 3,
+      "active": 1
     },
     {
-      "type": "Visa",
+      "provider": "Visa",
       "account_number": "65798336",
-      "user_id": 4
+      "user_id": 4,
+      "active": 1
     },
     {
-      "type": "MasterCard",
+      "provider": "MasterCard",
       "account_number": "14861152",
-      "user_id": 5
+      "user_id": 5,
+      "active": 1
     },
     {
-      "type": "AmEx",
+      "provider": "AmEx",
       "account_number": "30850973",
-      "user_id": 6
+      "user_id": 6,
+      "active": 1
     },
     {
-      "type": "Visa",
+      "provider": "Visa",
       "account_number": "88480322",
-      "user_id": 7
+      "user_id": 7,
+      "active": 1
     },
     {
-      "type": "AmEx",
+      "provider": "AmEx",
       "account_number": "28415273",
-      "user_id": 8
+      "user_id": 8,
+      "active": 1
     },
     {
-      "type": "PayPal",
+      "provider": "PayPal",
       "account_number": "29245599",
-      "user_id": 8
+      "user_id": 8,
+      "active": 1
     },
     {
-      "type": "PayPal",
+      "provider": "PayPal",
       "account_number": "82774143",
-      "user_id": 7
+      "user_id": 7,
+      "active": 1
     },
     {
-      "type": "Visa",
+      "provider": "Visa",
       "account_number": "02326016",
-      "user_id": 6
+      "user_id": 6,
+      "active": 1
     },
     {
-      "type": "MasterCard",
+      "provider": "MasterCard",
       "account_number": "94802487",
-      "user_id": 5
+      "user_id": 5,
+      "active": 1
     },
     {
-      "type": "AmEx",
+      "provider": "AmEx",
       "account_number": "35025706",
-      "user_id": 4
+      "user_id": 4,
+      "active": 1
     },
     {
-      "type": "AmEx",
+      "provider": "AmEx",
       "account_number": "73807288",
-      "user_id": 3
+      "user_id": 3,
+      "active": 1
     },
     {
-      "type": "MasterCard",
+      "provider": "MasterCard",
       "account_number": "87520805",
-      "user_id": 2
+      "user_id": 2,
+      "active": 1
     },
     {
-      "type": "PayPal",
+      "provider": "PayPal",
       "account_number": "77676200",
-      "user_id": 1
+      "user_id": 1,
+      "active": 1
     },
     {
-      "type": "Visa",
+      "provider": "Visa",
       "account_number": "18338287",
-      "user_id": 8
+      "user_id": 8,
+      "active": 1
     },
     {
-      "type": "AmEx",
+      "provider": "AmEx",
       "account_number": "20983108",
-      "user_id": 2
+      "user_id": 2,
+      "active": 1
     },
     {
-      "type": "MasterCard",
+      "provider": "MasterCard",
       "account_number": "34922867",
-      "user_id": 7
+      "user_id": 7,
+      "active": 1
     },
     {
-      "type": "Visa",
+      "provider": "Visa",
       "account_number": "34399279",
-      "user_id": 6
+      "user_id": 6,
+      "active": 1
     }
   ]
 }
