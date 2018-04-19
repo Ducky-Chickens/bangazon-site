@@ -1,6 +1,6 @@
 'use strict';
 
-// let models = require('./models');
+let models = require('./models');
 
 let { users } = require('./seeders/data/users');
 let { products } = require('./seeders/data/products');
@@ -30,10 +30,10 @@ models.sequelize.sync({ force: true })
   return models.Order.bulkCreate(orders);
 })
 .then(() => {
-  return models.OrderProduct.bulkCreate(orderProducts);
+  return models.ProductType.bulkCreate(productTypes);
 })
 .then(() => {
-  return models.ProductType.bulkCreate(productTypes);
+  return models.OrderProduct.bulkCreate(orderProducts);
 })
 .then(() => {
   process.exit();

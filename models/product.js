@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     product_type: DataTypes.INTEGER,
     product_price: DataTypes.STRING,
     product_description: DataTypes.STRING,
-    customer_id: DataTypes.STRING,
+    user_id: DataTypes.STRING,
     listing_date: DataTypes.STRING
   }, {tableName: 'products', timestamps: false});
   Product.associate = function(models) {
