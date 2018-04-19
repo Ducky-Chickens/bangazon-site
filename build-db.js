@@ -11,7 +11,7 @@ let { productTypes } = require('./seeders/data/productTypes');
 
 models.sequelize.sync({ force: true })
 .then(() => {
-  return models.Customer.bulkCreate(users);
+  return models.User.bulkCreate(users);
 })
 .then(() => {
   return models.Product.bulkCreate(products);
