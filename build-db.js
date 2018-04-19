@@ -17,13 +17,13 @@ models.sequelize.sync({ force: true })
   return models.ProductType.bulkCreate(productTypes);
 })
 .then(() => {
+  return models.PaymentType.bulkCreate(paymentTypes);
+})
+.then(() => {
   return models.Order.bulkCreate(orders);
 })
 .then(() => {
   return models.Product.bulkCreate(products);
-})
-.then(() => {
-  return models.PaymentType.bulkCreate(paymentTypes);
 })
 .then(() => {
   return models.OrderProduct.bulkCreate(orderProducts);
