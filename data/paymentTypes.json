@@ -41,7 +41,7 @@
       "customerId": 8
     },
     {
-    "type": "PayPal",
+      "type": "PayPal",
       "accountNumber": "29245599",
       "customerId": 8
     },
