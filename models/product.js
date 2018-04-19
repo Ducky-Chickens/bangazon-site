@@ -6,7 +6,8 @@ module.exports = (sequelize, DataTypes) => {
     price: DataTypes.STRING,
     description: DataTypes.STRING,
     user_id: DataTypes.STRING,
-    listing_date: DataTypes.STRING
+    listing_date: DataTypes.STRING,
+    quantity: DataTypes.INTEGER
   }, {tableName: 'products', timestamps: false});
   Product.associate = function(models) {
     Product.hasMany(models.OrderProduct, {
