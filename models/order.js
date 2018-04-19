@@ -5,9 +5,12 @@ module.exports = (sequelize, DataTypes) => {
     payment_type: DataTypes.INTEGER
   }, {tableName: 'orders', timestamps: false});
   Order.associate = function(models) {
-    Order.belongsToMany(models.Product, {
-      through: 'order_products'
+    Order.hasMany(models.OrderProduct, {
+      foreignKey: 'order_id'
+    }),
+    Order.belongsTo(models.PaymentType, {
+      foreignKey: 'payment_type_id'
     })
-  };
+  }; 
   return Order;
 };

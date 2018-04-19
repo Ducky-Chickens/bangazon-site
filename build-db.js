@@ -14,19 +14,19 @@ models.sequelize.sync({ force: true })
   return models.User.bulkCreate(users);
 })
 .then(() => {
+  return models.ProductType.bulkCreate(productTypes);
+})
+.then(() => {
+  return models.Order.bulkCreate(orders);
+})
+.then(() => {
   return models.Product.bulkCreate(products);
 })
 .then(() => {
   return models.PaymentType.bulkCreate(paymentTypes);
 })
 .then(() => {
-  return models.Order.bulkCreate(orders);
-})
-.then(() => {
   return models.OrderProduct.bulkCreate(orderProducts);
-})
-.then(() => {
-  return models.ProductType.bulkCreate(productTypes);
 })
 .then(() => {
   process.exit();
