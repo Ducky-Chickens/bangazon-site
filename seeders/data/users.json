@@ -1,0 +1,92 @@
+{
+  "customers": [
+    {
+      "first_name": "Fred",
+      "last_name": "Smith",
+      "city": "St. Louis",
+      "address": "500 Somewho Lane",
+      "state": "Iowa",
+      "postal_code": "12345",
+      "phone_number": "123-555-5309",
+      "email": "a@a.com",
+      "password": "password123"
+    },
+    {
+      "firstName": "Yolanda",
+      "lastName": "Garrison",
+      "city": "Monkeys Elbow",
+      "address": "123 Mockingbird Ln",
+      "state": "Iowa",
+      "postal_code": "12345",
+      "phone_number": "123-555-5309",
+      "email": "a@b.com",
+      "password": "password123"
+    },
+    {
+      "firstName": "Maurice",
+      "lastName": "Moss",
+      "city": "Fanta Say",
+      "address": "3098 Moms House Way",
+      "state": "Iowa",
+      "postal_code": "12345",
+      "phone_number": "123-555-5309",
+      "email": "a@c.com",
+      "password": "password123"
+    },
+    {
+      "firstName": "Fred",
+      "lastName": "Sanford",
+      "city": "Nashvegas",
+      "address": "45 Bigdummy Rd",
+      "state": "Iowa",
+      "postal_code": "12345",
+      "phone_number": "123-555-5309",
+      "email": "a@d.com",
+      "password": "password123"
+    },
+    {
+      "firstName": "Cher",
+      "lastName": null,
+      "city": "New Detroit",
+      "address": "500 Somewhen Lane Apt 1",
+      "state": "Iowa",
+      "postal_code": "12345",
+      "phone_number": "123-555-5309",
+      "email": "a@e.com",
+      "password": "password123"
+    },
+    {
+      "firstName": "Danny",
+      "lastName": "Elfman",
+      "city": "Emerald City",
+      "address": "666 Beetlejuice Way",
+      "state": "Iowa",
+      "postal_code": "12345",
+      "phone_number": "123-555-5309",
+      "email": "a@f.com",
+      "password": "password123"
+    },
+    {
+      "firstName": "Myrtle",
+      "lastName": "Moaning",
+      "city": "Pleasantville",
+      "address": "500 Somewhat Lane",
+      "state": "Iowa",
+      "postal_code": "12345",
+      "phone_number": "123-555-5309",
+      "email": "a@g.com",
+      "password": "password123"
+    },
+    {
+      "firstName": "Ben",
+      "lastName": "Gentle",
+      "city": "Cedar Rapids",
+      "address": "1 The Woods",
+      "state": "Iowa",
+      "postal_code": "12345",
+      "phone_number": "123-555-5309",
+      "email": "a@h.com",
+      "password": "password123"
+    }
+  ]
+}
