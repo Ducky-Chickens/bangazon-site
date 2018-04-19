@@ -9,9 +9,9 @@ module.exports = (sequelize, DataTypes) => {
     listing_date: DataTypes.STRING
   }, {tableName: 'products', timestamps: false});
   Product.associate = function(models) {
-    Products.belongsToMany(models.Orders, {
+    Product.belongsToMany(models.Order, {
       through: 'OrderProducts',
-      as: 'products',
+      as: 'order products',
       foreignKey: 'product_id'
     });
   };

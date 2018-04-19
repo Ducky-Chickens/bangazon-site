@@ -5,7 +5,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {tableName: 'product_types', timestamps: false});
   ProductType.associate = function(models) {
       ProductType.belongsToMany(models.Product, {
-        as: 'products',
+        through: 'products',
+        as: 'type products',
         foreignKey: 'product_type_id'
       });
     };

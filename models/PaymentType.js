@@ -7,8 +7,8 @@ module.exports = (sequelize, DataTypes) => {
     active: DataTypes.TINYINT
   }, {tableName: 'payment_types', timestamps: false});
     PaymentType.associate = function(models) {
-      PaymentType.belongsToMany(models.Order, {
-        as: 'orders',
+      PaymentType.belongsTo(models.Order, {
+        as: 'payment type',
         foreignKey: 'payment_type_id'
       });
     };
