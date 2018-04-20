@@ -32,7 +32,8 @@ $ sequelize init
 
 #### Account
 
-#### Inventory
+#### Inventory `/inventory/`
+Leads to the current user's inventory of products they are selling.  Can only be accessed by a logged in user.
 
 #### Cart
 
