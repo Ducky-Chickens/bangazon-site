@@ -11,6 +11,10 @@ ul
     a(href='/cart') Cart
   li.row
     a(href='/account') Account
+  li.row
+    a(href='/login') Login
+  li.row
+    a(href='/register') Register
 
 if session.passport
   span #{session.passport.user.username}
