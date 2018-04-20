@@ -12,6 +12,9 @@ router.get('/', renderLatestProducts);
 // pipe all other requests through the route modules
 router.use(require('./authRoute'));
 
+router.use(require("./account"));
+
 router.use(require('./productDetailRoute'));
+
 
 module.exports = router;

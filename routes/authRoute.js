@@ -12,6 +12,8 @@ const {
   logout
 } = require('../controllers/authCtrl.js');
 
+
+
 // new users
 router.get('/register', displayRegister);
 router.post('/register', register);
@@ -30,9 +32,11 @@ router.post('/logout', logout);
 // by passport. Coolness
 // NOTE that we don't need to export this function. Why?
 function isLoggedIn(req, res, next) {
-  if (req.isAuthenticated())
-      return next();
-  res.redirect('/login');
+  if (req.isAuthenticated()&&(req.user)) {
+    return next();
+  }else{
+    res.redirect('/login');
+  }  
 }
 
 module.exports = router;
