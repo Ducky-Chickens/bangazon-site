@@ -23,6 +23,7 @@ $ sequelize init
     + change `dialect` value to `postgres`
 
 #### Home
+Displays the 20 latest products in the Bangazon warehouse!
 
 #### Login / Register
 
