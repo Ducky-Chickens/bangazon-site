@@ -1,0 +1,9 @@
+extends index.pug
+
+block content
+  h2 Check out our latest 20 products! Buy some ish with your skriz!
+  each product in products
+    a(href=`/products/${product.id}`) 
+      h3= product.title
+    h4= product.price
+    p= product.description
