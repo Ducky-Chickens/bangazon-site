@@ -1,6 +1,14 @@
 {
   "orderProducts": [
     {
+      "order_id": 2,
+      "product_id": 1
+    },
+    {
+      "order_id": 2,
+      "product_id": 49
+    },
+    {
       "order_id": 17,
       "product_id": 30
     },
