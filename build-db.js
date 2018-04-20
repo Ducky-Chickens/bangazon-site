@@ -9,6 +9,13 @@ let { orders } = require('./seeders/data/orders');
 let { orderProducts } = require('./seeders/data/orderProducts');
 let { productTypes } = require('./seeders/data/productTypes');
 
+const { generateHash } = require('./config/passport-strat.js');
+
+// hash user data passwords
+users.forEach(user => {
+  user["password"] = generateHash(user["password"])
+})
+
 models.sequelize.sync({ force: true })
 .then(() => {
   return models.User.bulkCreate(users);
@@ -31,7 +38,6 @@ models.sequelize.sync({ force: true })
 .then(() => {
   process.exit();
 });
-
 
 // Proof that the bulkCreate succeeded =>
 // --------------------------------------

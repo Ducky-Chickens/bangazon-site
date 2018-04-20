@@ -12,6 +12,12 @@ let User = null;
 
 // Then define our custom strategies with our instance of the LocalStrategy.
 
+
+// add our hashed password generating function inside the callback function
+module.exports.generateHash = password => {
+  return bCrypt.hashSync(password, bCrypt.genSaltSync(8));
+};
+
 //******************** Registration authetication. Takes two args *************************
 const RegistrationStrategy = new Strategy(
   // arg 1: declare what request (req) fields our usernameField and passwordField (passport variables) are.
@@ -26,11 +32,6 @@ const RegistrationStrategy = new Strategy(
     console.log("local strat callback: password", email);
     User = req.app.get("models").User; // this is made possible by line 14 in app.js: app.set('models', require('./models'));
 
-    // add our hashed password generating function inside the callback function
-    const generateHash = password => {
-      return bCrypt.hashSync(password, bCrypt.genSaltSync(8));
-    };
-
     // using the Sequelize user model we initialized earlier as User, we check to see if the user already exists, and if not we add them.
     User.findOne({
       where: { email } // remember, this is object literal shorthand. Same as { email: email}
@@ -43,7 +44,7 @@ const RegistrationStrategy = new Strategy(
         });
       } else {
         console.log("in the else");
-        const userPassword = generateHash(password); //function we defined above
+        const userPassword = module.exports.generateHash(password); //function we defined above
         const data =
           // values come from the req.body, added by body-parser when register form request is submitted
           {
