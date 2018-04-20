@@ -39,12 +39,3 @@ models.sequelize.sync({ force: true })
   process.exit();
 });
 
-// Proof that the bulkCreate succeeded =>
-// --------------------------------------
-// .then(() => {
-//   return models.Director.findAll({ raw: true });
-// })
-// .then((directorsData) => {
-//   console.log(directorsData);
-//   process.exit();
-// })
