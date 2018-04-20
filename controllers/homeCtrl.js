@@ -7,7 +7,6 @@ module.exports.renderLatestProducts = (req, res) => {
   sequelize.query('select * from products order by id desc limit 20', 
   { type: sequelize.QueryTypes.SELECT})
   .then(products => {
-    console.log(products);
     res.render('home', {products});
   });
 };
