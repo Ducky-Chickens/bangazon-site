@@ -1,4 +1,5 @@
-# bangazon-site
+# Bangazon Corp -- Site
+
 ## Getting Started
 ### Install
 To initialize the database: 
@@ -22,10 +23,17 @@ $ sequelize init
     + change `dialect` value to `postgres`
 
 #### Home
+Displays the 20 latest products in the Bangazon warehouse!
 
 #### Login / Register
 
 #### Categories
 
 #### Prodcuts
-+ In the browser, proceeding to ```http://localhost:8080/products/:id```, where :id is an integer, will display a products 
++ In the browser, proceeding to ```http://localhost:8080/products/:id```, where :id is an integer, will display a products detail page for an individual product.
+#### Account
+
+#### Inventory
+
+#### Cart
+

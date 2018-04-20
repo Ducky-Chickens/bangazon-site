@@ -7,7 +7,7 @@ module.exports.renderProductDetails = (req, res) => {
   Product.findById(req.params.id)
   .then(product => {
     // pass product object to productDetails view
-    console.log(product.dataValues)
     res.render('productDetails', product.dataValues);
   })
-};
+};  
+
