@@ -5,8 +5,9 @@ ul
     a(href='/') Home
   li.row
     a(href='/categories') Categories
-  li.row
-    a(href='/inventory') Inventory
+  if session.passport
+    li.row
+      a(href='/inventory') Inventory
   li.row
     a(href='/cart') Cart
   li.row
