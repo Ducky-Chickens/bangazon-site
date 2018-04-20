@@ -29,7 +29,7 @@ $ sequelize init
 #### Categories
 
 #### Prodcuts
-
++ In the browser, proceeding to ```http://localhost:8080/products/:id```, where :id is an integer, will display a products detail page for an individual product.
 #### Account
 
 #### Inventory
