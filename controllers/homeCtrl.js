@@ -3,10 +3,11 @@
 'use strict'
 
 module.exports.renderLatestProducts = (req, res) => {
-  const { Product } = req.app.get('models');
-  Product.sequelize.query('select * from products order by id desc limit 20')
+  const { sequelize } = req.app.get('models');
+  sequelize.query('select * from products order by id desc limit 20', 
+  { type: sequelize.QueryTypes.SELECT})
   .then(products => {
     console.log(products);
-    res.render('home', products);
+    res.render('home', {products});
   });
 };
