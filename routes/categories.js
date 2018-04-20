@@ -2,7 +2,7 @@
 
 const { Router } = require("express");
 const productTypeRouter = Router();
-const {  } = require('../controllers/productTypeCtrl');
+const { renderAllProductTypes, renderOneProductType } = require('../controllers/productTypesCtrl');
 
 
 productTypeRouter.get("/categories", renderAllProductTypes);
