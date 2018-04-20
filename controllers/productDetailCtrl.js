@@ -9,4 +9,5 @@ module.exports.renderProductDetails = (req, res) => {
     // pass product object to productDetails view
     res.render('productDetails', product.dataValues);
   })
-};
+};  
+
