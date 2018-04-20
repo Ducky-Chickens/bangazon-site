@@ -22,4 +22,17 @@ $ sequelize init
     + change `database` value to `bangazon_site`
     + change `dialect` value to `postgres`
 
+#### Home
+
+#### Login / Register
+
+#### Categories
+
+#### Prodcuts
+
+#### Account
+
+#### Inventory
+
+#### Cart
 
