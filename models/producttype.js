@@ -1,12 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var ProductType = sequelize.define('ProductType', {
-    type_name: DataTypes.STRING
+    name: DataTypes.STRING
   }, {tableName: 'product_types', timestamps: false});
   ProductType.associate = function(models) {
-      ProductType.belongsToMany(models.Product, {
-        through: 'products',
-        as: 'type products',
+      ProductType.hasMany(models.Product, {
         foreignKey: 'product_type_id'
       });
     };
