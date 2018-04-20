@@ -1,19 +1,24 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Product = sequelize.define('Product', {
-    product_title: DataTypes.STRING,
-    product_type: DataTypes.INTEGER,
-    product_price: DataTypes.STRING,
-    product_description: DataTypes.STRING,
-    user_id: DataTypes.STRING,
-    listing_date: DataTypes.STRING
+    title: DataTypes.STRING,
+    type: DataTypes.INTEGER,
+    price: DataTypes.STRING,
+    description: DataTypes.STRING,
+    user_id: DataTypes.INTEGER,
+    listing_date: DataTypes.STRING,
+    quantity: DataTypes.INTEGER
   }, {tableName: 'products', timestamps: false});
   Product.associate = function(models) {
-    Product.belongsToMany(models.Order, {
-      through: 'OrderProducts',
-      as: 'order products',
-      foreignKey: 'product_id'
+    Product.hasMany(models.OrderProduct, {
+      foreignKey: 'product_id' 
     });
+    Product.belongsTo(models.ProductType, {
+      foreignKey: 'product_type_id'
+    })
+    Product.belongsTo(models.User, {
+      foreignKey: 'user_id'
+    })
   };
   return Product;
 };

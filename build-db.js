@@ -21,7 +21,7 @@ models.sequelize.sync({ force: true })
   return models.User.bulkCreate(users);
 })
 .then(() => {
-  return models.Product.bulkCreate(products);
+  return models.ProductType.bulkCreate(productTypes);
 })
 .then(() => {
   return models.PaymentType.bulkCreate(paymentTypes);
@@ -30,7 +30,7 @@ models.sequelize.sync({ force: true })
   return models.Order.bulkCreate(orders);
 })
 .then(() => {
-  return models.ProductType.bulkCreate(productTypes);
+  return models.Product.bulkCreate(products);
 })
 .then(() => {
   return models.OrderProduct.bulkCreate(orderProducts);
