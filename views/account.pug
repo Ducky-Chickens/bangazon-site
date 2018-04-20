@@ -1,11 +1,16 @@
 extends index.pug
 
 block content
-  h1 WAZZERRPPP
-  p #{first_name}
-  p #{last_name}
-  p #{address}
-  p #{city}
-  p #{state}
-  p #{postal_code}
-  p #{phone_number}
+  h1 My account
+  div #{first_name}
+  div #{last_name}
+  div #{address}
+  div #{city}
+  div #{state}
+  div #{postal_code}
+  div #{phone_number}
+
+  button#editAccount Edit
+
+  script
+    include ../client/account.js

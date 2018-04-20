@@ -25,7 +25,6 @@ router.post('/login', login);
 router.get('/welcome', isLoggedIn, welcome);
 router.post('/logout', logout);
 
-router.get('/account', isLoggedIn);
 // We add this to the welcome route as an additional step to take before calling
 // the controller's 'welcome' method. 'isAuthenticated' is added to the request obj
 // If there is a user, then all is well and we call `next()` to move on to the next
@@ -34,7 +33,6 @@ router.get('/account', isLoggedIn);
 // NOTE that we don't need to export this function. Why?
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()&&(req.user)) {
-    console.log('is authed',req.user);
     return next();
   }else{
     res.redirect('/login');
