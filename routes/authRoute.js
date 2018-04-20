@@ -26,6 +26,7 @@ router.get('/welcome', isLoggedIn, welcome);
 router.post('/logout', logout);
 
 router.get('/inventory', isLoggedIn);
+router.get('/account', isLoggedIn);
 
 // We add this to the welcome route as an additional step to take before calling
 // the controller's 'welcome' method. 'isAuthenticated' is added to the request obj
