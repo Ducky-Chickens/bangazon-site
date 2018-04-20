@@ -1,0 +1,104 @@
+{
+  "orders": [
+    {
+      "user_id": 4,
+      "order_date": "2017-5-23",
+      "payment_type_id": 13
+    },
+    {
+      "user_id": 1,
+      "order_date": "2017-7-28",
+      "payment_type_id": 14
+    },
+    {
+      "user_id": 3,
+      "order_date": "2017-11-10",
+      "payment_type_id": 3
+    },
+    {
+      "user_id": 2,
+      "order_date": "2018-3-9",
+      "payment_type_id": null
+    },
+    {
+      "user_id": 1,
+      "order_date": "2017-09-22",
+      "payment_type_id": 1
+    },
+    {
+      "user_id": 3,
+      "order_date": "2017-10-7",
+      "payment_type_id": null
+    },
+    {
+      "user_id": 6,
+      "order_date": "2017-09-19",
+      "payment_type_id": 6
+    },
+    {
+      "user_id": 7,
+      "order_date": "2017-5-23",
+      "payment_type_id": 7
+    },
+    {
+      "user_id": 4,
+      "order_date": "2017-8-16",
+      "payment_type_id": null
+    },
+    {
+      "user_id": 5,
+      "order_date": "2017-05-13",
+      "payment_type_id": null
+    },
+    {
+      "user_id": 2,
+      "order_date": "2017-04-04",
+      "payment_type_id": 10
+    },
+    {
+      "user_id": 1,
+      "order_date": "2017-7-14",
+      "payment_type_id": 16
+    },
+    {
+      "user_id": 6,
+      "order_date": "2017-4-19",
+      "payment_type_id": 20
+    },
+    {
+      "user_id": 1,
+      "order_date": "2018-2-12",
+      "payment_type_id": null
+    },
+    {
+      "user_id": 7,
+      "order_date": "2018-2-14",
+      "payment_type_id": null
+    },
+    {
+      "user_id": 2,
+      "order_date": "2017-6-30",
+      "payment_type_id": 2
+    },
+    {
+      "user_id": 4,
+      "order_date": "2018-3-18",
+      "payment_type_id": 13
+    },
+    {
+      "user_id": 8,
+      "order_date": "2018-3-5",
+      "payment_type_id": 8
+    },
+    {
+      "user_id": 8,
+      "order_date": "2017-5-6",
+      "payment_type_id": null
+    },
+    {
+      "user_id": 3,
+      "order_date": "2017-4-26",
+      "payment_type_id": 14
+    }
+  ]
+}
