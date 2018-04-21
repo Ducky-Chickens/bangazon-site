@@ -2,8 +2,10 @@ extends index.pug
 
 block content
   h2 Search results
-  //- each product in products
-  //-   a(href=`/products/${product.id}`) 
-  //-     h3= product.title
-  //-   p= product.description
-  //-   h4= product.price
+  if message
+    h3= message
+  each product in products
+    a(href=`/products/${product.dataValues.id}`) 
+      h3= product.dataValues.title
+    p= product.description
+    h4= product.price 
