@@ -5,6 +5,7 @@ block content
     each type, i in allTypes
         .productType(productID=i)
             h2 #{type.name}
-                ul
-                    each product in type.Products
-                        li #{product.title}
+            ul
+                each product in type.Products
+                    li #{product.title}
+

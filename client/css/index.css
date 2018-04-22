@@ -3,3 +3,33 @@
   padding-left: 2vw;
   list-style-type: none;
 }
+
+#categories{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.productType{
+  display: inline-block;
+  margin: 2em;
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 1em;
+  transition: all .2s;
+}
+
+.productType:hover{
+  box-shadow: 0 0 2em dodgerblue;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.productType>h2{
+  text-transform: capitalize;
+}
+
+.productType>ul{
+  margin-left: -1em;
+}
