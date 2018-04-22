@@ -2,6 +2,9 @@ extends index.pug
 
 block content
   #categories
-    each type, index in allProdTypes
-        h2 #{type.name}
-            ul#inventory
+    each type, i in allTypes
+        .productType(productID=i)
+            h2 #{type.name}
+                ul
+                    each product in type.Products
+                        li #{product.title}
