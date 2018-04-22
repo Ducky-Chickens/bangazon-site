@@ -37,7 +37,6 @@ app.use(passport.session()); // persistent login sessions
 // so we can access it in the Pug templates
 app.use( (req, res, next) => {
   res.locals.session = req.session;
-  // console.log('res.locals.session', res.locals.session);
   next();
 });
 app.use(bodyParser.urlencoded({ extended: false }));

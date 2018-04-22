@@ -3,12 +3,18 @@
 const { Router } = require('express');
 const router = Router();
 
-router.get('/', (req, res, next) => {
-  res.render('index');
-});
+const { renderLatestProducts } = require('../controllers/homeCtrl');
+
+
+router.get('/', renderLatestProducts);
+
+
 
 // pipe all other requests through the route modules
 router.use(require('./authRoute'));
 router.use(require('./categories'));
+router.use(require('./inventoryRoute'));
+router.use(require("./account"));
+router.use(require('./productDetailRoute'));
 
 module.exports = router;

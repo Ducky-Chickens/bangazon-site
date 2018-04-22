@@ -1,0 +1,11 @@
+extends index.pug
+
+block content
+  #inventory
+    h2 Inventory  
+      ol#inventory
+        each product, index in products
+          li(id=index)
+            .name= product.dataValues.title
+            .currentInventory= product.dataValues.quantity-product.OrderProducts.length
+            .numberSold= product.OrderProducts.length
