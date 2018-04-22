@@ -1,0 +1,7 @@
+extends index.pug
+
+block content
+  #categories
+    each type, index in allProdTypes
+        h2 #{type.name}
+            ul#inventory
