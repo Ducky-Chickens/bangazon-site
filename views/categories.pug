@@ -3,9 +3,11 @@ extends index.pug
 block content
   #categories
     each type, i in allTypes
-        .productType(productID=i)
+        .productType(productID=type.id)
             h2 #{type.name}
             ul
                 each product in type.Products
                     li #{product.title}
 
+block scripts
+    script(src='js/categories.js')
