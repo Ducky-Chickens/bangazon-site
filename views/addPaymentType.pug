@@ -1,0 +1,12 @@
+extends index.pug
+
+block content
+  h2 Add Payment Type
+  form(action='/account/addPaymentType' method='POST')
+    input(type='number' value=account_number name='account_number')
+    select(name='provider')
+      option(value='AmEx') AmEx
+      option(value='Visa') Visa
+      option(value='MasterCard') MasterCard
+      option(value='PayPal') PayPal
+    button#saveAccount(type='submit') Save
