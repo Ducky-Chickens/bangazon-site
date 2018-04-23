@@ -10,7 +10,6 @@ module.exports.renderAllProductTypes = (req, res, next) => {
         for(let i=0;i<allTypes.length;i++){
             allTypes[i].Products = allTypes[i].Products.slice(0, 3);
         }
-        // res.status(200).json(allTypes);
         res.render('categories', {allTypes});
     });
 }
@@ -21,6 +20,5 @@ module.exports.renderOneProductType = (req, res, next) => {
         where: { id: req.params.id },
         include: [{ model: Product }]
     })
-    // .then(typeprods => res.status(200).json(typeprods));
     .then(typeprods => res.render('category-products', {typeprods}));
 }
