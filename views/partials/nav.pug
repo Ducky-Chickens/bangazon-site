@@ -22,5 +22,7 @@ if session.passport
   form(method="POST")
     button(type="submit" formaction="/logout") logout
 
-script
-  include ../../client/search.js
+block scripts
+    script(src='js/categories.js')
+    //- script(src='js/search.js')
+

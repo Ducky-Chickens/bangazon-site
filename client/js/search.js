@@ -1,4 +1,4 @@
-'use strict'; 
+// 'use strict'; 
 
 // Search bar listener
 document.getElementById("searchBar").addEventListener('keypress', function(event) {

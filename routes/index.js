@@ -14,7 +14,7 @@ router.get('/', renderLatestProducts);
 router.use(require('./authRoute'));
 router.use(require('./categories'));
 router.use(require('./inventoryRoute'));
-router.use(require("./account"));
+router.use(require('./account'));
 router.use(require('./productDetailRoute'));
 router.use(require('./productSearchRoute'));
 
