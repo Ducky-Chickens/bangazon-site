@@ -8,6 +8,7 @@ module.exports.renderAllProductTypes = (req, res, next) => {
     .then(prodtypes=> {
         let allTypes = JSON.parse(JSON.stringify(prodtypes));
         for(let i=0;i<allTypes.length;i++){
+            allTypes[i].total_products = allTypes[i].Products.length;
             allTypes[i].Products = allTypes[i].Products.slice(0, 3);
         }
         res.render('categories', {allTypes});
