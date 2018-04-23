@@ -28,6 +28,11 @@ Displays the 20 latest products in the Bangazon warehouse!
 #### Login / Register
 
 #### Categories
++ `http://localhost:8080/categories`: all product types are rendered to DOM in individual cards with only 3 products listed (if product type has 3 or more products)
++ `http://localhost:8080/categories/<product_type_id>`: 
+    + Redirected when user clicks on any product card 
+    + Renders all products for specified `product_type_id`
+    + Anchor tags for each product title redirects page to further product info (`http://localhost:8080/products/<product_id>`) 
 
 #### Prodcuts
 + In the browser, proceeding to ```http://localhost:8080/products/:id```, where :id is an integer, will display a products detail page for an individual product.
