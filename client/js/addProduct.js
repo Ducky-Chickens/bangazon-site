@@ -1,4 +1,4 @@
 
-document.getElementById('addProductButton').addEventListener('mouseup', (e)=>{
-    console.log('yep');
+document.getElementById('addProductButton').addEventListener('mouseup', ()=>{
+    console.log(document.querySelectorAll('#productForm input'));
 });

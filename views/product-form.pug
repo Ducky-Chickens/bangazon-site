@@ -5,15 +5,15 @@ block content
     #productForm
         .productInput
             label(for='title') Product Title
-            input.text(id='title' name='title' type='text')
+            input(id='title' name='title' type='text')
             span.errAstrik
         .productInput
             label(for='price') Price
-            input.text(name='price' type='text')
+            input(name='price' type='text')
             span.errAstrik
         .productInput
             label(for='email') Description
-            input.text(name='email' type='text')
+            input(name='email' type='text')
             span.errAstrik
         .productInput
             label(for='quantity') Quanity Available
@@ -26,8 +26,8 @@ block content
                 each prodType in productTypes
                     option(value=prodType.id) #{prodType.name}
             span.errAstrik
-        .productSubmit
-            input#addProductButton(type='submit' value='add product')
+    .productSubmit
+        input#addProductButton(type='submit' value='add product')
     #productFormError
 
 block scripts
