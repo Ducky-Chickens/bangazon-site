@@ -5,23 +5,23 @@ block content
     #productForm
         .productInput
             label(for='title') Product Title
-            input(id='title' name='title' type='text')
+            input(prop='title' name='title' type='text')
             span.errAstrik
         .productInput
             label(for='price') Price
-            input(name='price' type='text')
+            input(prop='price' name='price' type='text')
             span.errAstrik
         .productInput
             label(for='email') Description
-            input(name='email' type='text')
+            input(prop='email' name='email' type='text')
             span.errAstrik
         .productInput
             label(for='quantity') Quanity Available
-            input(name='quantity' type='number' min=1 value=1)
+            input(prop='quantity' name='quantity' type='number' min=1 value=1)
             span.errAstrik
         .productInput
             label(for='typeSelect') Product Type 
-            select#typeSelect
+            select#typeSelect(prop='product_type_id')
                 option(value=0)
                 each prodType in productTypes
                     option(value=prodType.id) #{prodType.name}
