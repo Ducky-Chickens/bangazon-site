@@ -21,12 +21,6 @@ module.exports.renderOneProductType = (req, res, next) => {
         where: { id: req.params.id },
         include: [{ model: Product }]
     })
-    .then(prodtypes => res.status(200).json(prodtypes));
+    // .then(typeprods => res.status(200).json(typeprods));
+    .then(typeprods => res.render('category-products', {typeprods}));
 }
-
-        // let allProdTypes = prodtypes.map(({Products})=> {
-        //     const [a, b, c] = Products;
-        //     Products = [a,b,c];
-        //     return { Products };
-        // });
-        // prodtypes.Products = prodtypes.Products.slice(0,3);
