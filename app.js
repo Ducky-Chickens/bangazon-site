@@ -1,6 +1,7 @@
 'use strict';
 
 const express = require('express');
+var methodOverride = require('method-override')
 const app = express();
 const passport = require('passport')
 var session = require('express-session');
@@ -20,6 +21,8 @@ app.set('view engine', 'pug');
 app.locals.globalWow = "Express is, like, MAGIC"; //If we end up needing some value to be available to every pug template, look into using something like this that can be accessed in the templates just like any variable we pass directly to the template.
 
 app.use(express.static(__dirname + "/client"));
+
+app.use(methodOverride('_method'))
 
 let routes = require('./routes/');
 

@@ -2,8 +2,10 @@
 const { Router } = require('express');
 const router = Router();
 
-const { renderInventory } = require('../controllers/inventoryCtrl');
+const { renderInventory, removeInventoryProduct } = require('../controllers/inventoryCtrl');
 
 router.get('/inventory', renderInventory);
+
+router.delete('/inventory', removeInventoryProduct)
 
 module.exports = router;

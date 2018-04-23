@@ -7,11 +7,11 @@ module.exports = (sequelize, DataTypes) => {
   OrderProduct.associate = function(models) {
     OrderProduct.belongsTo(models.Order, {
       foreignKey: 'order_id',
-      // onDelete: 'CASCADE',
+      onDelete: 'CASCADE',
     }),
     OrderProduct.belongsTo(models.Product, {
       foreignKey: 'product_id',
-      // onDelete: 'CASCADE',
+      onDelete: 'CASCADE',
     });
   };
   return OrderProduct;

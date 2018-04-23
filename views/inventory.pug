@@ -6,6 +6,12 @@ block content
       ol#inventory
         each product, index in products
           li(id=index)
-            .name= product.dataValues.title
+            a(href=`/products/${product.id}`) 
+              .name= product.dataValues.title
             .currentInventory= product.dataValues.quantity-product.OrderProducts.length
             .numberSold= product.OrderProducts.length
+            form(method='POST', action=`/inventory?_method=DELETE&id=${product.id}`)
+              button(type='submit') Remove
+
+
+
