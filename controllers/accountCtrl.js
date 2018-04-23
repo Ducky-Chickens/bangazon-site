@@ -12,7 +12,15 @@ module.exports.updateAccount = (req, res, next) => {
 }
 
 module.exports.renderAccount = (req, res, next) => {
-  res.render("account", req.user);
+  const { PaymentType } = req.app.get('models');
+  PaymentType.findAll({
+    where: { user_id: req.user.id },
+  }).then(paymentTypes => {
+    res.render("account", {
+      ...req.user,
+      paymentTypes,
+    });
+  });
 }
 
 module.exports.renderAccountEdit = (req, res, next) => {
@@ -29,7 +37,7 @@ module.exports.updatePaymentType = (req, res, next) => {
   const userId = req.user.id;
   const { PaymentType } = req.app.get('models');
 
-  if(provider && accountNumber && userId){
+  if (provider && accountNumber && userId) {
     PaymentType.create({
       user_id: userId,
       provider,
@@ -40,3 +48,16 @@ module.exports.updatePaymentType = (req, res, next) => {
     });
   }
 }
+
+module.exports.deletePaymentType = (req, res, next) => {
+  const paymentTypeId = +req.body.paymentTypeId;
+  const { PaymentType } = req.app.get('models');
+  
+  PaymentType.destroy({
+    where: {
+      id: paymentTypeId,
+    },
+  }).then(() => {
+    res.redirect('/account');
+  });
+};

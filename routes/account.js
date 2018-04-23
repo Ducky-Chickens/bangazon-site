@@ -8,7 +8,8 @@ const {
   updateAccount,
   renderAccountEdit,
   renderAddPaymentType,
-  updatePaymentType
+  updatePaymentType,
+  deletePaymentType
  } = require('../controllers/accountCtrl');
 
 router.get("/account/edit", renderAccountEdit);
@@ -16,6 +17,9 @@ router.post("/account/edit", updateAccount);
 
 router.get("/account/addPaymentType", renderAddPaymentType);
 router.post("/account/addPaymentType", updatePaymentType);
+
+router.post("/account/deletePaymentType", deletePaymentType);
+
 
 router.get("/account", renderAccount);
 
