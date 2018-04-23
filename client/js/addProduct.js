@@ -1,17 +1,16 @@
 
-// let typeSelect = document.getElementById('typeSelect');
-let errAst = document.querySelectorAll('.errAstrik');
+let errAst = Array.from(document.querySelectorAll('.errAstrik'));
+
+const formComplete = (cv) => cv.value;
+
+const postForm = () => console.log('hell yea!');
+
+const throwErrs = (allInputs) => allInputs.forEach(line=>{
+    if (!line.value) line.nextSibling.innerText = "*";
+});
 
 document.getElementById('addProductButton').addEventListener('mouseup', ()=>{
-    for (let i = 0; i < errAst.length; i++) {
-        errAst[i].innerText = '';
-    }
-    let allInputs = document.querySelectorAll('#productForm input, #typeSelect');
-    for (let i = 0; i < allInputs.length; i++) {
-        if (allInputs[i].value){
-            console.log('yep', allInputs[i].getAttribute('prop'), allInputs[i].value);
-        } else {
-            allInputs[i].nextSibling.innerText = "*";
-        }
-    }
+    let allInputs = Array.from(document.querySelectorAll('#productForm input, #typeSelect'));
+    errAst.forEach(ast=>ast.innerText = '');
+    allInputs.every(formComplete) ? postForm() : throwErrs(allInputs); 
 });
