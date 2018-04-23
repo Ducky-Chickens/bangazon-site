@@ -1,25 +1,34 @@
 extends index.pug
 
 block content
-    form#addProduct(name='addProduct' method='post' action='/inventory/add')
+    //- form#addProduct(name='addProduct' method='post' action='/inventory/add')
+    #productForm
         .productInput
             label(for='title') Product Title
             input.text(id='title' name='title' type='text')
+            span.errAstrik
         .productInput
             label(for='price') Price
             input.text(name='price' type='text')
+            span.errAstrik
         .productInput
             label(for='email') Description
             input.text(name='email' type='text')
+            span.errAstrik
         .productInput
             label(for='quantity') Quanity Available
             input(name='quantity' type='number' min=1 value=1)
+            span.errAstrik
         .productInput
             label(for='typeSelect') Product Type 
             select#typeSelect
                 option(value=0)
                 each prodType in productTypes
                     option(value=prodType.id) #{prodType.name}
-
-        .productInput
+            span.errAstrik
+        .productSubmit
             input#addProductButton(type='submit' value='add product')
+    #productFormError
+
+block scripts
+    script(src='../js/addProduct.js')
