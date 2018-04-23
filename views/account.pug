@@ -1,16 +1,17 @@
 extends index.pug
 
 block content
-  h1 My account
-  div #{first_name}
-  div #{last_name}
-  div #{address}
-  div #{city}
-  div #{state}
-  div #{postal_code}
-  div #{phone_number}
-
-  button#editAccount Edit
-
+  if session.passport
+    h1 My account
+    div #{first_name}
+    div #{last_name}
+    div #{address}
+    div #{city}
+    div #{state}
+    div #{postal_code}
+    div #{phone_number} 
+    button#editAccount Edit
+  else
+    p Please login or register for an account
 block scripts
   script(src='js/account.js')
