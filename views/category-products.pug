@@ -1,0 +1,12 @@
+extends index.pug
+
+block content
+    a(href='/categories') ← back to all categories
+    h2#typeTitle #{typeprods.name}
+    each prod, i in typeprods.Products
+        .categoryProduct
+            a(href='/products/' + prod.id)
+                h3 #{prod.title}
+            ul
+                li $#{prod.price}
+                li Quantity Available: #{prod.quantity}

@@ -9,11 +9,11 @@ html
     h1 Bangazon!
     h2 #{globalWow}
 
-  block content
-    button#showLogin login
-    button#showRegister register
-
-    script
-      include ../client/client.js
+    block content
+      button#showLogin login
+      button#showRegister register
+    
+    block scripts
+      script(src='js/client.js')
   
   
