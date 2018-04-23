@@ -3,10 +3,19 @@
 
 const { Router } = require('express');
 const router = Router();
-const { renderAccount, updateAccount, renderAccountEdit } = require('../controllers/accountCtrl');
+const {
+  renderAccount,
+  updateAccount,
+  renderAccountEdit,
+  renderAddPaymentType,
+  updatePaymentType
+ } = require('../controllers/accountCtrl');
 
 router.get("/account/edit", renderAccountEdit);
 router.post("/account/edit", updateAccount);
+
+router.get("/account/addPaymentType", renderAddPaymentType);
+router.post("/account/addPaymentType", updatePaymentType);
 
 router.get("/account", renderAccount);
 
