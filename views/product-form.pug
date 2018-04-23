@@ -1,18 +1,25 @@
 extends index.pug
 
 block content
-    form#addProduct(name="addProduct" method="post" action="/inventory/add")
+    form#addProduct(name='addProduct' method='post' action='/inventory/add')
         .productInput
-            label(for="title") Product Title
-            input.text(id="title" name="title" type="text")
+            label(for='title') Product Title
+            input.text(id='title' name='title' type='text')
         .productInput
-            label(for="price") Price
-            input.text(name="price" type="text")
+            label(for='price') Price
+            input.text(name='price' type='text')
         .productInput
-            label(for="email") Description
-            input.text(name="email" type="text")
+            label(for='email') Description
+            input.text(name='email' type='text')
         .productInput
-            label(for="confirmation") Quanity Available
-            input(name="confirmation" type="number" min=1 value=1)
+            label(for='quantity') Quanity Available
+            input(name='quantity' type='number' min=1 value=1)
         .productInput
-            input#addProductButton(type="submit" value="add product")
+            label(for='typeSelect') Product Type 
+            select#typeSelect
+                option(value=0)
+                each prodType in productTypes
+                    option(value=prodType.id) #{prodType.name}
+
+        .productInput
+            input#addProductButton(type='submit' value='add product')
