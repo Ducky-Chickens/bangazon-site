@@ -37,3 +37,7 @@
 .productType>ul{
   margin-left: -1em;
 }
+
+.errAstrik{
+  color: red;
+}

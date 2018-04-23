@@ -22,7 +22,7 @@ block content
         .productInput
             label(for='typeSelect') Product Type 
             select#typeSelect(prop='product_type_id')
-                option(value=0)
+                option
                 each prodType in productTypes
                     option(value=prodType.id) #{prodType.name}
             span.errAstrik
