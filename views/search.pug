@@ -1,0 +1,11 @@
+extends index.pug
+
+block content
+  h2 Search results
+  if message
+    h3= message
+  each product in products
+    a(href=`/products/${product.dataValues.id}`) 
+      h3= product.dataValues.title
+    p= product.description
+    h4= product.price 

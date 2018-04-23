@@ -1,5 +1,7 @@
 ul
   li.row
+    input#searchBar(type="text")
+  li.row
     a(href='/') Home
   li.row
     a(href='/categories') Categories
@@ -19,3 +21,8 @@ if session.passport
   span #{session.passport.user.username}
   form(method="POST")
     button(type="submit" formaction="/logout") logout
+
+block scripts
+    script(src='js/categories.js')
+    script(src='js/search.js')
+
