@@ -6,26 +6,26 @@ block content
         .productInput
             label(for='title') Product Title
             input(prop='title' name='title' type='text')
-            span.errAstrik
+            span.errAsterisk
         .productInput
             label(for='price') Price
             input(prop='price' name='price' type='text')
-            span.errAstrik
+            span.errAsterisk
         .productInput
-            label(for='email') Description
-            input(prop='email' name='email' type='text')
-            span.errAstrik
+            label(for='description') Description
+            textarea(prop='description' name='description')
+            span.errAsterisk
         .productInput
             label(for='quantity') Quanity Available
             input(prop='quantity' name='quantity' type='number' min=1 value=1)
-            span.errAstrik
+            span.errAsterisk
         .productInput
             label(for='typeSelect') Product Type 
             select#typeSelect(prop='product_type_id')
                 option
                 each prodType in productTypes
                     option(value=prodType.id) #{prodType.name}
-            span.errAstrik
+            span.errAsterisk
     .productSubmit
         input#addProductButton(type='submit' value='add product')
     #productFormError
