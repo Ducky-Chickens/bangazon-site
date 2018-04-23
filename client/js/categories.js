@@ -1,4 +1,4 @@
-let allTypes = document.getElementsByClassName('productType');
+allTypes = document.getElementsByClassName('productType');
 
 for (let i = 0; i < allTypes.length; i++) {
     allTypes[i].addEventListener('mousedown', (e) => {
