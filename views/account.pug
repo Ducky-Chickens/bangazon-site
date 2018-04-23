@@ -10,7 +10,12 @@ block content
   div #{postal_code}
   div #{phone_number}
 
+
   button#editAccount Edit
+
+  .prevOrders
+    a(href='/account/orders') 
+      button View Previous Orders
 
 block scripts
   script(src='js/account.js')

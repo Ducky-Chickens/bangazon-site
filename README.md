@@ -34,9 +34,12 @@ Displays the 20 latest products in the Bangazon warehouse!
     + Renders all products for specified `product_type_id`
     + Anchor tags for each product title redirects page to further product info (`http://localhost:8080/products/<product_id>`) 
 
-#### Prodcuts
+#### Products
 + In the browser, proceeding to ```http://localhost:8080/products/:id```, where :id is an integer, will display a products detail page for an individual product.
 #### Account
+Opens page displaying account info and the ability to edit the users saved information.
+    - This page also contains a button that links to previous orders
+        - Each order is a link that contains the products associated with and the total price of the order
 
 #### Inventory `/inventory/`
 Leads to the current user's inventory of products they are selling.  Can only be accessed by a logged in user.

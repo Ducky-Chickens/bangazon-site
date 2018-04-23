@@ -33,7 +33,7 @@ models.sequelize.sync({ force: true })
   return models.Product.bulkCreate(products);
 })
 .then(() => {
-  return models.OrderProduct.bulkCreate(orderProducts);
+  return models.order_product.bulkCreate(orderProducts);
 })
 .then(() => {
   process.exit();
