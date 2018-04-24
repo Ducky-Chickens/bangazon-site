@@ -11,13 +11,16 @@ block content
             if product.dataValues.count
               if (product.dataValues.quantity - product.dataValues.count) === 0
                 div.currentInventory Remaining Inventory: Sold out!  
-                .numberSold Amount sold: #{product.dataValues.count}
+                if product.dataValues.count   
+                  .numberSold Amount sold: #{product.dataValues.count}
               if (product.dataValues.quantity - product.dataValues.count) > 0                      
                 div.currentInventory Remaining Inventory: #{product.dataValues.quantity - product.dataValues.count}
-                .numberSold Amount sold: #{product.dataValues.count}
+                if product.dataValues.count   
+                  .numberSold Amount sold: #{product.dataValues.count}
             if !product.dataValues.count
-              div.currentInventory Remaining Inventory: #{product.dataValues.quantity}   
-              .numberSold Amount sold: #{product.dataValues.count}         
+              div.currentInventory Remaining Inventory: #{product.dataValues.quantity}
+              if product.dataValues.count   
+                .numberSold Amount sold: #{product.dataValues.count}         
             div.productId Product ID: #{product.dataValues.id}
             form(method='POST', action=`/inventory?_method=DELETE&id=${product.dataValues.id}`)
               button(type='submit') Remove
