@@ -66,25 +66,22 @@ module.exports.addInventory = (req, res, next) => {
   next();
 }
 
-module.exports.removeInventoryProduct = (req, res) => {
-  const { Product, OrderProduct } = req.app.get('models');
+module.exports.removeInventoryProduct = (req, res, next) => {
+  const { Product, order_product, sequelize } = req.app.get('models');
   Product.destroy({
     where: {
       user_id: req.user.id,
       id: req.query.id
     },
   })
-    .then(data => {
-      Product.findAll({
-        where: { user_id: req.user.id },
-        include: [
-          {
-            model: OrderProduct
-          }
-        ]
-      })
-        .then(products => {
-          res.status(200).render('inventory', { products });
-        });
+  .then(data => {
+    Product.findAll({
+      where: { user_id: req.user.id }
+    })
+    .then(products => {
+      // res.status(200).render('inventory', { matcher });
+      res.redirect('/inventory');
     });
+  });
 };
+
