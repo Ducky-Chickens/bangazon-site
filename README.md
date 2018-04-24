@@ -44,5 +44,9 @@ Opens page displaying account info and the ability to edit the users saved infor
 #### Inventory `/inventory/`
 Leads to the current user's inventory of products they are selling.  Can only be accessed by a logged in user.
 
+#### Sell a Product `/inventory/add`
+Presents form for authenticated user to POST a new product to their inventory/`products` table
++ Product Form will only be submitted when all fields all filled.
++ Page will redirect to `/inventory`, where newly added product will be listed with user inventory
 #### Cart
 
