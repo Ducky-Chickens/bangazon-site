@@ -75,13 +75,7 @@ module.exports.removeInventoryProduct = (req, res, next) => {
     },
   })
   .then(data => {
-    Product.findAll({
-      where: { user_id: req.user.id }
-    })
-    .then(products => {
-      // res.status(200).render('inventory', { matcher });
-      res.redirect('/inventory');
-    });
+    res.redirect('/inventory');
   });
 };
 
