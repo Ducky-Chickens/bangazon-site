@@ -1,6 +1,11 @@
 extends index.pug
 
 block content
+
+  .prevOrders
+    a(href='/account/orders') 
+      button View Previous Orders
+
   if session.passport
     h1 My account
     div #{first_name}
@@ -13,6 +18,7 @@ block content
     button#editAccount Edit
   else
     p Please login or register for an account
+
 block scripts
   script(src='js/account.js')
   script(src='js/search.js')
