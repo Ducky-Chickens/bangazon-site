@@ -1,18 +1,21 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  var OrderProduct = sequelize.define('OrderProduct', {
-    order_id: DataTypes.INTEGER,
-    product_id: DataTypes.INTEGER
-  }, {tableName: 'order_products', timestamps: false});
-  OrderProduct.associate = function(models) {
-    OrderProduct.belongsTo(models.Order, {
+  var order_product = sequelize.define('order_product', {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+  }, {tableName: 'order_product', timestamps: false});
+  order_product.associate = function(models) {
+    order_product.belongsTo(models.Order, {
       foreignKey: 'order_id',
-      // onDelete: 'CASCADE',
+      onDelete: 'CASCADE'    
     }),
-    OrderProduct.belongsTo(models.Product, {
+    order_product.belongsTo(models.Product, {
       foreignKey: 'product_id',
-      // onDelete: 'CASCADE',
+      onDelete: 'CASCADE',      
     });
   };
-  return OrderProduct;
+  return order_product;
 };

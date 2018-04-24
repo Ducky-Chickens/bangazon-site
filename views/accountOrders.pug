@@ -1,0 +1,7 @@
+extends index.pug
+
+block content
+  h1 Your Order History
+    each order in orders
+      h3
+        a(href=`/orders/${order.id}`) Order ##{order.id}
