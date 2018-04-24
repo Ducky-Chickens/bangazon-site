@@ -18,7 +18,9 @@ module.exports.renderInventory = (req, res) => {
 module.exports.removeInventoryProduct = (req, res) => {
   const { Product, OrderProduct } = req.app.get('models');
   Product.destroy({
-    where: { user_id: req.user.id, id: req.query.id },
+    where: { 
+      user_id: req.user.id, 
+      id: req.query.id },
   })
     .then(data => {
       Product.findAll({

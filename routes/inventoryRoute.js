@@ -7,7 +7,6 @@ const { renderInventory, removeInventoryProduct, renderAddInventory, addInventor
 router.get('/inventory', renderInventory);
 router.get('/inventory/add', renderAddInventory);
 router.post('/inventory/add', addInventory, renderInventory);
-
 router.delete('/inventory', removeInventoryProduct)
 
 module.exports = router;
