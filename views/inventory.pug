@@ -4,8 +4,14 @@ block content
   #inventory
     h2 Inventory  
       ol#inventory
-        each product, index in products
+        each product, index in matcher
           li(id=index)
             .name= product.dataValues.title
-            .currentInventory= product.dataValues.quantity-product.OrderProducts.length
-            .numberSold= product.OrderProducts.length
+            if product.dataValues.count
+              if (product.dataValues.quantity - product.dataValues.count) === 0
+                div.currentInventory Remaining Inventory: Sold out!  
+              if (product.dataValues.quantity - product.dataValues.count) > 0                      
+                div.currentInventory Remaining Inventory: #{product.dataValues.quantity - product.dataValues.count}
+            if !product.dataValues.count
+              div.currentInventory Remaining Inventory: #{product.dataValues.quantity}            
+            div.productId Product ID: #{product.dataValues.id}

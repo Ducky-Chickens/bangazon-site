@@ -2,8 +2,8 @@
 const { Router } = require('express');
 const router = Router();
 
-const { renderInventory } = require('../controllers/inventoryCtrl');
+const { gatherInventory, renderInventory, unArrayCount, findMatch } = require('../controllers/inventoryCtrl');
 
-router.get('/inventory', renderInventory);
+router.get('/inventory', gatherInventory, unArrayCount, findMatch, renderInventory);
 
 module.exports = router;
