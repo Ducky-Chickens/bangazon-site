@@ -30,4 +30,5 @@ module.exports.addInventory = (req, res, next) => {
   Product.create(req.body)
   .then(res=>res.status(201))
   .catch(err=>err.status(501).json(err));
+  next();
 }

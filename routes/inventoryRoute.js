@@ -6,6 +6,8 @@ const { renderInventory, renderAddInventory, addInventory } = require('../contro
 
 router.get('/inventory', renderInventory);
 router.get('/inventory/add', renderAddInventory);
-router.post('/inventory/add', addInventory);
+router.post('/inventory/add', addInventory, renderInventory);
 
 module.exports = router;
+
+

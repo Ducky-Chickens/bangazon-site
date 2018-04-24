@@ -14,7 +14,7 @@ const postForm = (allInputs) => {
         headers: new Headers({
             'Content-Type': 'application/json'
         })
-    }).then(res=>console.log('yep',res))
+    }).then(res=> window.location.href = `${location.origin}/inventory`)
     .catch(err=>console.log('nope',err));
 };
 
