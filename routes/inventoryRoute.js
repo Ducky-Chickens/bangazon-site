@@ -6,7 +6,7 @@ const { gatherInventory, renderInventory, unArrayCount, findMatch, renderAddInve
 
 router.get('/inventory', gatherInventory, unArrayCount, findMatch, renderInventory);
 router.get('/inventory/add', renderAddInventory);
-router.post('/inventory/add', addInventory, gatherInventory, unArrayCount, findMatch renderInventory);
+router.post('/inventory/add', addInventory, gatherInventory, unArrayCount, findMatch, renderInventory);
 
 module.exports = router;
 
