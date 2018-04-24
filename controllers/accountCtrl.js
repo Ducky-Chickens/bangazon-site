@@ -15,7 +15,7 @@ module.exports.renderAccount = (req, res, next) => {
   const { PaymentType } = req.app.get('models');
 
   PaymentType.findAll({
-    where: { user_id: req.user.id },
+    where: { user_id: req.user.id, active: 't', },
   }).then(paymentTypes => {
     res.render("account", {
       ...req.user,
@@ -54,11 +54,14 @@ module.exports.deletePaymentType = (req, res, next) => {
   const paymentTypeId = +req.body.paymentTypeId;
   const { PaymentType } = req.app.get('models');
 
-  PaymentType.destroy({
-    where: {
-      id: paymentTypeId,
-    },
-  }).then(() => {
+  PaymentType.update(
+    { active: 'f' },
+    {
+      where: {
+        id: paymentTypeId
+      }
+    }
+  ).then(() => {
     res.status(201);
   });
   next();
