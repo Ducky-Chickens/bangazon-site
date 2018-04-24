@@ -4,6 +4,10 @@
   list-style-type: none;
 }
 
+.row>form{
+  display: inline-block;
+}
+
 #categories{
   display: flex;
   flex-wrap: wrap;
@@ -32,4 +36,8 @@
 
 .productType>ul{
   margin-left: -1em;
+}
+
+.errAsterisk{
+  color: red;
 }
