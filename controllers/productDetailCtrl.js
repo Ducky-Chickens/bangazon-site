@@ -11,39 +11,44 @@ module.exports.renderProductDetails = (req, res) => {
   })
 };  
 
+
 module.exports.addProductToCart = (req, res) => {
   req.app.get("models").Order.find({where: {user_id: req.session.passport.user.id, payment_type_id: null}})
   .then(order=>{
     // if there isnt one, create one and post it to the orders table
     if(!order){
       let order = {
+        id: null,
         user_id: req.session.passport.user.id,
         payment_type_id: null,
       }
       req.app.get("models").Order.create(order)
       .then(newOrder=>{
-        console.log('order',newOrder);
-        // post new order_product here
+
+        let product = {
+          product_id: +req.body.product_id,
+          order_id: newOrder.dataValues.id,
+        }
+        return req.app.get("models").order_product.create(product)
       })
-      //post new order to the orders table here
+      .then(newProduct=>{
+        // redirect to "cart" page?
+      })
+      
 
     } else if(order){
       
       let product = {
+        id: null,
         product_id: +req.body.product_id,
         order_id: order.dataValues.id,
       }
       req.app.get("models").order_product.create(product)
       .then(newProduct=>{
-        console.log('newProduct',newProduct);
-        // post new order_product here
+        // redirect to "cart" page?
       })
-      console.log("product to add:", product  );
-      //post this order_product to the order_product table
 
-    } else {
-      console.log('WTF MAN');
-    }
+    } 
   })
 
 };  
