@@ -2,17 +2,11 @@
 const { Router } = require('express');
 const router = Router();
 
-<<<<<<< HEAD
-const { gatherInventory, renderInventory, unArrayCount, findMatch } = require('../controllers/inventoryCtrl');
+const { gatherInventory, renderInventory, unArrayCount, findMatch, renderAddInventory, addInventory } = require('../controllers/inventoryCtrl');
 
 router.get('/inventory', gatherInventory, unArrayCount, findMatch, renderInventory);
-=======
-const { renderInventory, renderAddInventory, addInventory } = require('../controllers/inventoryCtrl');
-
-router.get('/inventory', renderInventory);
 router.get('/inventory/add', renderAddInventory);
-router.post('/inventory/add', addInventory, renderInventory);
->>>>>>> master
+router.post('/inventory/add', addInventory, gatherInventory, unArrayCount, findMatch renderInventory);
 
 module.exports = router;
 
