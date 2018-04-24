@@ -1,5 +1,7 @@
 ul
   li.row
+    input#searchBar(type="text")
+  li.row
     a(href='/') Home
   li.row
     a(href='/categories') Categories
@@ -23,3 +25,4 @@ ul
 
 if session.passport
   span #{session.passport.user.username}
+
