@@ -22,11 +22,12 @@ router.post('/register', register);
 router.get('/login', displayLogin);
 router.post('/login', login);
 
-router.get('/welcome', isLoggedIn, welcome);
-router.post('/logout', logout);
-
 router.get('/inventory', isLoggedIn);
 router.get('/inventory/add', isLoggedIn);
+// router.post('/inventory/add', isLoggedIn);
+
+router.get('/welcome', isLoggedIn, welcome);
+router.post('/logout', logout);
 
 // We add this to the welcome route as an additional step to take before calling
 // the controller's 'welcome' method. 'isAuthenticated' is added to the request obj
