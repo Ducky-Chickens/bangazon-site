@@ -6,7 +6,7 @@ block content
       ol#inventory
         each product, index in matcher
           li(id=index)
-            a(href=`/products/${product.id}`) 
+            a(href=`/products/${product.dataValues.id}`) 
               .name= product.dataValues.title
             if product.dataValues.count
               if (product.dataValues.quantity - product.dataValues.count) === 0
