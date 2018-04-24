@@ -37,6 +37,7 @@ Displays the 20 latest products in the Bangazon warehouse!
 #### Prodcuts
 + In the browser, proceeding to ```http://localhost:8080/products/:id```, where :id is an integer, will display a products detail page for an individual product.
 #### Account
++ In the browser, proceeding to ```http://localhost:8080/account```, after being logged in, will display users' payment types.  User can add or delete their payment types on this page.
 
 #### Inventory `/inventory/`
 Leads to the current user's inventory of products they are selling.  Can only be accessed by a logged in user.
