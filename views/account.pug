@@ -19,6 +19,18 @@ block content
   else
     p Please login or register for an account
 
+  #paymentType
+    h2 Payment Types
+    ol
+      each type, index in paymentTypes
+        li(id=index)
+          #paymentType
+            .provider= type.provider
+            .account-number= type.account_number
+            button(id=type.id).deletePaymentType Delete
+
+    button#addPaymentType Add Payment Type
+
 block scripts
   script(src='js/account.js')
   script(src='js/search.js')
