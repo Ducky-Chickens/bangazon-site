@@ -3,7 +3,6 @@
 let trueCount;
 let values;
 let productObj;
-let conditional;
 let easyAccess;
 let matcher;
 
