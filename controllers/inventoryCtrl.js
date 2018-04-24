@@ -46,8 +46,6 @@ module.exports.findMatch = (req, res, next) => {
 
 module.exports.renderInventory = (req, res, next) => {
   res.render('inventory', {matcher});
-  // res.json(matcher);
-  console.log('what the fuckl', matcher);
 }
 
 
