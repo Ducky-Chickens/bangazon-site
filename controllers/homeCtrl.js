@@ -1,6 +1,6 @@
 // const express = require('express');
 // const app = express();
-'use strict'
+'use strict';
 
 module.exports.renderLatestProducts = (req, res) => {
   const { sequelize } = req.app.get('models');

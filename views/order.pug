@@ -1,0 +1,11 @@
+extends index.pug
+
+block content
+  if session.passport.user.id === order.user_id
+    h2 Order ##{order.id}
+      each product in orderWithProducts
+        h3= product.title
+        h3= product.price
+    h2 Total = $#{orderTotal}
+  else
+    h2 That's not your order, homie
