@@ -11,19 +11,26 @@ document.getElementById("addPaymentType").addEventListener('click', () => {
 
 document.querySelectorAll(".deletePaymentType").forEach((button) => {
   button.addEventListener('click', (event) => {
-    console.log('event.target.ids', event.target.id);
     deletePaymentType(event.target.id);
   });
 });
 
 const deletePaymentType = (id) => {
   fetch(`${location.origin}/account/deletePaymentType`, {
-    method: 'POST',
+    method: 'DELETE',
     body: JSON.stringify({
       paymentTypeId: id,
     }),
     headers: new Headers({
-      'Content-Type': 'application/json'
-    })
-  });
+      'Content-Type': 'application/json',
+    }),
+    credentials: 'include',
+  })
+    .then(() => {
+      console.log('redirect');
+    window.location.href = `${location.origin}/account`;
+  })
+    .catch((error) => {
+      console.log(error);
+    });
 };

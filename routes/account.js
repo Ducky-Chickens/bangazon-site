@@ -18,8 +18,7 @@ router.post("/account/edit", updateAccount);
 router.get("/account/addPaymentType", renderAddPaymentType);
 router.post("/account/addPaymentType", updatePaymentType);
 
-router.post("/account/deletePaymentType", deletePaymentType);
-
+router.delete("/account/deletePaymentType", deletePaymentType, renderAccount);
 
 router.get("/account", renderAccount);
 

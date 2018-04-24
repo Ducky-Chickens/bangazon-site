@@ -13,6 +13,7 @@ module.exports.updateAccount = (req, res, next) => {
 
 module.exports.renderAccount = (req, res, next) => {
   const { PaymentType } = req.app.get('models');
+
   PaymentType.findAll({
     where: { user_id: req.user.id },
   }).then(paymentTypes => {
@@ -43,8 +44,8 @@ module.exports.updatePaymentType = (req, res, next) => {
       provider,
       account_number: accountNumber,
       active: 't',
-    }).then(value => {
-      res.render("account", req.user);
+    }).then(() => {
+      res.redirect('/account');
     });
   }
 }
@@ -52,12 +53,13 @@ module.exports.updatePaymentType = (req, res, next) => {
 module.exports.deletePaymentType = (req, res, next) => {
   const paymentTypeId = +req.body.paymentTypeId;
   const { PaymentType } = req.app.get('models');
-  
+
   PaymentType.destroy({
     where: {
       id: paymentTypeId,
     },
   }).then(() => {
-    res.redirect('/account');
+    res.status(201);
   });
+  next();
 };
