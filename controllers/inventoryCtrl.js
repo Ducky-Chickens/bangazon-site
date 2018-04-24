@@ -65,3 +65,17 @@ module.exports.addInventory = (req, res, next) => {
   .catch(err=>err.status(501).json(err));
   next();
 }
+
+module.exports.removeInventoryProduct = (req, res, next) => {
+  const { Product, order_product, sequelize } = req.app.get('models');
+  Product.destroy({
+    where: {
+      user_id: req.user.id,
+      id: req.query.id
+    },
+  })
+  .then(data => {
+    res.redirect('/inventory');
+  });
+};
+

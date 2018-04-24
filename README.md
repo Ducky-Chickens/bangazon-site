@@ -45,6 +45,7 @@ Displays the 20 latest products in the Bangazon warehouse!
 
 #### Inventory `/inventory/`
 Leads to the current user's inventory of products they are selling.  Can only be accessed by a logged in user.
++ Selecting the ```delete``` button next to a product will remove the product from the user's inventory and the database. The inventory page updates immediately.
 
 #### Sell a Product `/inventory/add`
 Presents form for authenticated user to POST a new product to their inventory/`products` table

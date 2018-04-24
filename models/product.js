@@ -10,7 +10,9 @@ module.exports = (sequelize, DataTypes) => {
     quantity: DataTypes.INTEGER
   }, {tableName: 'products', timestamps: false});
   Product.associate = function(models) {
-    Product.belongsToMany(models.Order, { through: 'order_product', foreignKey: 'product_id' });
+    Product.belongsToMany(models.Order, { 
+      through: 'order_product', 
+      foreignKey: 'product_id' });
     Product.belongsTo(models.ProductType, {
       foreignKey: 'product_type_id'
     })
