@@ -5,24 +5,24 @@ ul
     a(href='/') Home
   li.row
     a(href='/categories') Categories
+  li.row
+    a(href='/account') Account
   if session.passport
     li.row
       a(href='/inventory') Inventory
-  li.row
-    a(href='/cart') Cart
-  li.row
-    a(href='/account') Account
-  li.row
-    a(href='/login') Login
-  li.row
-    a(href='/register') Register
+    li.row
+      a(href='/inventory/add') Sell a Product
+    li.row
+      a(href='/cart') Cart
+    li.row
+      form(method="POST")
+        button(type='submit' formaction='/logout') Logout
+  else
+    li.row
+      a(href='/login') Login
+    li.row
+      a(href='/register') Register
 
 if session.passport
   span #{session.passport.user.username}
-  form(method="POST")
-    button(type="submit" formaction="/logout") logout
-
-block scripts
-    script(src='js/categories.js')
-    script(src='js/search.js')
 

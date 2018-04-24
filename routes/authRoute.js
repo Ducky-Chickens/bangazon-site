@@ -22,6 +22,10 @@ router.post('/register', register);
 router.get('/login', displayLogin);
 router.post('/login', login);
 
+router.get('/inventory', isLoggedIn);
+router.get('/inventory/add', isLoggedIn);
+// router.post('/inventory/add', isLoggedIn);
+
 router.get('/welcome', isLoggedIn, welcome);
 router.post('/logout', logout);
 
