@@ -10,5 +10,7 @@ block content
         a(href=`/products/${product.id}`)
           h3.cartProductTitle= product.title
         span.price= `$${product.price}`
+        form(method='POST', action=`/cart?_method=DELETE&order=${order.id}&product=${product.id}`)
+              button(type='submit') Remove
       h2 Total = $#{orderTotal}
         
