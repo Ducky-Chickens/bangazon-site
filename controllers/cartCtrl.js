@@ -21,4 +21,13 @@ module.exports.renderOrderProducts = (req, res, next) => {
 
 module.exports.destroyAllOrderProducts = (req, res, next) =>  {
   console.log('\n\n\nshiiit yea made it to console\n\n\n');
+  const { order_product } = req.app.get('models');
+  order_product.destroy({
+    where: {
+      order_id: req.query.id
+    },
+  })
+    .then(data => {
+      res.redirect('/cart');
+  });
 }
