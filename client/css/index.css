@@ -4,40 +4,41 @@
   list-style-type: none;
 }
 
-.row>form{
+.row > form {
   display: inline-block;
 }
 
-#categories{
+#categories {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;
 }
 
-.productType{
+.productType {
   display: inline-block;
   margin: 2em;
   padding: 1em;
   border: 1px solid black;
   border-radius: 1em;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
-.productType:hover{
+.productType:hover {
   box-shadow: 0 0 2em dodgerblue;
   transform: scale(1.05);
   cursor: pointer;
 }
 
-.productType>h2, #typeTitle {
+.productType > h2,
+#typeTitle {
   text-transform: capitalize;
 }
 
-.productType>ul{
+.productType > ul {
   margin-left: -1em;
 }
 
-.errAsterisk{
+.errAsterisk {
   color: red;
 }
