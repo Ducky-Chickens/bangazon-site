@@ -14,7 +14,11 @@ module.exports.renderOrderProducts = (req, res, next) => {
         for (let i = 0; i < products.length; i++) {
           orderTotal = orderTotal + parseInt(products[i].price);
         }
-        res.render('cart', { products, orderTotal });
+        res.render('cart', { products, orderTotal, order });
       });
     });
 };
+
+module.exports.destroyAllOrderProducts = (req, res, next) =>  {
+  console.log('\n\n\nshiiit yea made it to console\n\n\n');
+}
