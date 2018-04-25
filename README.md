@@ -53,3 +53,6 @@ Presents form for authenticated user to POST a new product to their inventory/`p
 + Page will redirect to `/inventory`, where newly added product will be listed with user inventory
 #### Cart
 
+
+
++ `Clear Cart` removes all products from cart (deleting all rows match `order_id` in `order_product` table)
