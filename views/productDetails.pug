@@ -1,12 +1,13 @@
 extends index.pug
 
 block content
-  .product-detail
+  form.product-detail(method="POST")
     h2 #{title}
     h4 #{description}
     p $#{price}
     p #{quantity} left in stock
-    button.addToOrder Add to cart
+    input(type="hidden" name="product_id" value=id)
+    button#addToOrder(type="submit") Add to cart
     
 block scripts
-  script(src='/js/search.js')
+  script(src='/js/addToCart.js')
