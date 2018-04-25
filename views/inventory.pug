@@ -9,7 +9,7 @@ block content
             a(href=`/products/${product.dataValues.id}`) 
               .name= product.dataValues.title
             if product.dataValues.count
-              if (product.dataValues.quantity - product.dataValues.count) === 0
+              if (product.dataValues.quantity - product.dataValues.count) <= 0
                 div.currentInventory Remaining Inventory: Sold out!  
                 if product.dataValues.count   
                   .numberSold Amount sold: #{product.dataValues.count}

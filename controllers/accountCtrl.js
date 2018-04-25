@@ -1,4 +1,5 @@
 'use strict';
+const { Op } = require('sequelize'); 
 
 module.exports.updateAccount = (req, res, next)=>{
   req.app.get('models').User.find({where: {id: req.user.id}})
@@ -11,7 +12,7 @@ module.exports.updateAccount = (req, res, next)=>{
 };
 
 module.exports.renderAccountOrders = (req, res, next) => {
-  req.app.get('models').Order.findAll({where: {user_id: req.user.id}})
+  req.app.get('models').Order.findAll({where: {user_id: req.user.id, payment_type_id: { [Op.ne]: null }}})
   .then(orders => {
     res.render('accountOrders', { orders });
   });
