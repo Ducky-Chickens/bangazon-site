@@ -75,3 +75,5 @@ Presents form for authenticated user to POST a new product to their inventory/`p
 * Opens page displaying cart info and the ability to edit the users active order.
   * Each product title is a link that proceeds to the product's details.
   * This page also contains controls delete products from an active order.
+
++ `Clear Cart` removes all products from cart (deleting all rows match `order_id` in `order_product` table)

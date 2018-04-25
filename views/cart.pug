@@ -3,6 +3,7 @@ extends index.pug
 block content
   h1 Your Cart
   h3 WOOOO!
+
     if !products
       h3 Your cart is empty chump. Waiting on that paycheck?
     else if products
@@ -16,4 +17,7 @@ block content
 
       a(href=`/cart/checkout/${order.id}`)
         button checkout
+      form(method='POST', action=`/cart/all?_method=DELETE&id=${order.id}`)
+        button(type='submit') Clear Cart
+        
         
