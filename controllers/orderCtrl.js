@@ -1,5 +1,6 @@
 'use strict';
 
+
 module.exports.renderOrderDetails = (req, res, next) => {
   req.app.get('models').Order.find({where: {id: req.params.id}})
   .then(order => {

@@ -18,7 +18,7 @@
     {
       "user_id": 2,
       "order_date": "2018-3-9",
-      "payment_type_id": null
+      "payment_type_id": 10
     },
     {
       "user_id": 1,
