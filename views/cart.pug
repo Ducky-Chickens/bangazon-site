@@ -13,4 +13,7 @@ block content
         form(method='POST', action=`/cart?_method=DELETE&order=${order.id}&product=${product.id}`)
               button(type='submit') Remove
       h2 Total = $#{orderTotal}
+
+      a(href=`/cart/checkout/${order.id}`)
+        button checkout
         
