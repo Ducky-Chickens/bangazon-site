@@ -1,0 +1,14 @@
+extends index.pug
+
+block content
+  h1 Check your chups
+
+  form(method="POST" action='/cart/checkout?_method=PATCH')
+    p Chups your chup chups
+    .radios
+      each type, index in paymentTypes
+        div
+          input(type='radio' id=`paymentChoice${index}` name='payType' value=`${type.id}`)
+          label(for=`paymentChoice${index}`) #{type.provider} - #{type.account_number}
+
+    button(type='submit') Chups it

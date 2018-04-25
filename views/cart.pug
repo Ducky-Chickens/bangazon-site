@@ -8,4 +8,7 @@ block content
         h3.cartProductTitle= product.title
       span.price= `$${product.price}`
     h2 Total = $#{orderTotal}
+  a(href=`cart/checkout/${order.id}`)
+    button#completePayment checkout
+  pre.log
         
