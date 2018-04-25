@@ -3,9 +3,14 @@ extends index.pug
 block content
   h1 Your Cart
   h3 WOOOO!
-    each product in products
-      a(href=`/products/${product.id}`)
-        h3.cartProductTitle= product.title
-      span.price= `$${product.price}`
-    h2 Total = $#{orderTotal}
+    if !products
+      h3 Your cart is empty chump. Waiting on that paycheck?
+    else if products
+      each product in products
+        a(href=`/products/${product.id}`)
+          h3.cartProductTitle= product.title
+        span.price= `$${product.price}`
+        form(method='POST', action=`/cart?_method=DELETE&order=${order.id}&product=${product.id}`)
+              button(type='submit') Remove
+      h2 Total = $#{orderTotal}
         
