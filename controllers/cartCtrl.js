@@ -9,12 +9,16 @@ module.exports.renderOrderProducts = (req, res, next) => {
       where: { user_id: req.user.id, payment_type_id: { [Op.eq]: null } }
     })
     .then(order => {
-      order.getProducts().then(products => {
-        let orderTotal = 0;
-        for (let i = 0; i < products.length; i++) {
-          orderTotal = orderTotal + parseInt(products[i].price);
-        }
-        res.render('cart', { products, orderTotal });
-      });
+      if (order) {
+        order.getProducts().then(products => {
+          let orderTotal = 0;
+          for (let i = 0; i < products.length; i++) {
+            orderTotal = orderTotal + parseInt(products[i].price);
+          }
+          res.render('cart', { products, orderTotal });
+        });
+      } else {
+        res.render('cart', {});
+      }
     });
 };
