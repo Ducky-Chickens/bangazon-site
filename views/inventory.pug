@@ -6,12 +6,21 @@ block content
       ol#inventory
         each product, index in matcher
           li(id=index)
-            .name= product.dataValues.title
+            a(href=`/products/${product.dataValues.id}`) 
+              .name= product.dataValues.title
             if product.dataValues.count
               if (product.dataValues.quantity - product.dataValues.count) === 0
                 div.currentInventory Remaining Inventory: Sold out!  
+                if product.dataValues.count   
+                  .numberSold Amount sold: #{product.dataValues.count}
               if (product.dataValues.quantity - product.dataValues.count) > 0                      
                 div.currentInventory Remaining Inventory: #{product.dataValues.quantity - product.dataValues.count}
+                if product.dataValues.count   
+                  .numberSold Amount sold: #{product.dataValues.count}
             if !product.dataValues.count
-              div.currentInventory Remaining Inventory: #{product.dataValues.quantity}            
+              div.currentInventory Remaining Inventory: #{product.dataValues.quantity}
+              if product.dataValues.count   
+                .numberSold Amount sold: #{product.dataValues.count}         
             div.productId Product ID: #{product.dataValues.id}
+            form(method='POST', action=`/inventory?_method=DELETE&id=${product.dataValues.id}`)
+              button(type='submit') Remove
