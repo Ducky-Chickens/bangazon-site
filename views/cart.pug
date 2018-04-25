@@ -1,0 +1,11 @@
+extends index.pug
+
+block content
+  h1 Your Cart
+  h3 WOOOO!
+    each product in products
+      a(href=`/products/${product.id}`)
+        h3.cartProductTitle= product.title
+      span.price= `$${product.price}`
+    h2 Total = $#{orderTotal}
+        
