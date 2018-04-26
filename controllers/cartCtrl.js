@@ -9,6 +9,9 @@ module.exports.renderOrderProducts = (req, res, next) => {
       where: { user_id: req.user.id, payment_type_id: { [Op.eq]: null } }
     })
     .then(order => {
+      if (order === null) {
+        res.render('cart');
+      }
       order.getProducts().then(products => {
         let orderTotal = 0;
         for (let i = 0; i < products.length; i++) {
