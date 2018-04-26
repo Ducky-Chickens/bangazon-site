@@ -6,7 +6,8 @@ block content
     h4 #{description}
     p $#{price}
     p #{quantity} left in stock
-    button.addToOrder Add to cart
+    if session.passport
+      button.addToOrder Add to cart
     
 block scripts
   script(src='/js/search.js')
